@@ -1,2 +1,2 @@
 # crypto
-Cryptocurrency build by following UDEMY course
+Cryptocurrency built by following UDEMY course

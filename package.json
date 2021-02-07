@@ -1,0 +1,23 @@
+{
+  "name": "crypto",
+  "version": "1.0.0",
+  "description": "Cryptocurrency built by following UDEMY course",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionutbarau/crypto.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ionutbarau/crypto/issues"
+  },
+  "homepage": "https://github.com/ionutbarau/crypto#readme",
+  "devDependencies": {
+    "jest": "^23.6.0"
+  }
+}

@@ -1,22 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a402edd-e784-486c-b822-90c05337bf13" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/crypto.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/block.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/block.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/blockchain.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto-hash.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crypto-hash.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    <list default="true" id="8a402edd-e784-486c-b822-90c05337bf13" name="Default Changelist" comment="Started Blockchain class">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +44,16 @@
       <updated>1612617142118</updated>
       <workItem from="1612617143363" duration="1621000" />
       <workItem from="1612642653297" duration="4125000" />
-      <workItem from="1612724164503" duration="1894000" />
+      <workItem from="1612724164503" duration="2113000" />
     </task>
+    <task id="LOCAL-00001" summary="Started Blockchain class">
+      <created>1612726115715</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612726115715</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,5 +70,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Started Blockchain class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Started Blockchain class" />
   </component>
 </project>

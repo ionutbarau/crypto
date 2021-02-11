@@ -1,0 +1,4 @@
+Proof of work tries to find the nonce that combined with the data (data + lastHash + timestamp) results in a hash with the number of leading zeros equal with difficulty level.
+
+data + nonce = 000000eb29.....
+difficulty = 6 (6 zeros)

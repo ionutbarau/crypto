@@ -5,10 +5,14 @@ const cryptoHash = require('./crypto-hash');
 class Block {
     constructor({timestamp, lastHash, hash, data, nonce, difficulty}) {
         this.timestamp = timestamp;
+        //hash of the previous block
         this.lastHash = lastHash;
+        //computed value based on SHA256(timestamp,lastHash,data,nonce, difficulty)
         this.hash = hash;
         this.data = data;
+        //also called number used once, that is used in mining to generate the hash until it reaches the difficulty level
         this.nonce=nonce;
+        //the number of leading zeros that the binary form of the hash has to have in order to be the result of the mining operations
         this.difficulty=difficulty;
     }
 

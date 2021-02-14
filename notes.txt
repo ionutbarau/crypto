@@ -1,4 +1,19 @@
 Proof of work tries to find the nonce that combined with the data (data + lastHash + timestamp) results in a hash with the number of leading zeros equal with difficulty level.
-
 data + nonce = 000000eb29.....
 difficulty = 6 (6 zeros)
+
+Security
+----------
+If you decide to modify one block, you then need to modify all the blocks in the chain, because of the last hash dependency and the fact that the hash
+of each block uses the last hash to compute its value. Essentially you have to mine again the whole chain with the new values. This is very expensive.
+You could argue that by modifying the difficulty, mining will be cheaper, but the chain validation protects against jumps.
+
+https://www.ibm.com/blogs/blockchain/2017/12/blockchain-security-what-keeps-your-transaction-data-safe/
+
+
+https://danielmiessler.com/study/encoding-encryption-hashing-obfuscation/
+
+
+
+npm run test (to execute tests)
+

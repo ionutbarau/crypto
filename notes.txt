@@ -1,3 +1,5 @@
+Blockchain
+------------------------------------------------------------------------------------------------------------------------
 Proof of work tries to find the nonce that combined with the data (data + lastHash + timestamp) results in a hash with the number of leading zeros equal with difficulty level.
 data + nonce = 000000eb29.....
 difficulty = 6 (6 zeros)
@@ -13,6 +15,27 @@ https://www.ibm.com/blogs/blockchain/2017/12/blockchain-security-what-keeps-your
 
 https://danielmiessler.com/study/encoding-encryption-hashing-obfuscation/
 
+TODO copy from table
+
+
+Crypto
+------------------------------------------------------------------------------------------------------------------------
+A blockchain powered cryptocurrency must:
+1. Contain Wallet objects
+2. Generate keys for digital signatures and verification
+3. Have transactions objects representing currency exchange
+
+Digital wallet composed of a private/public key pair and an address (which is a the same as public key).
+Every transaction needs to be signed with the wallet's private key. It is decrypt with the wallets public key.
+
+Transactions have 3 sections:
+1. Input (timestamp, current balance of the sender wallet, the public key (sender's wallet address), the signature)
+2. Output (destination wallet address with the amount that was sent to it; sender wallet address with the remaining amount)
+
+
+Each block in the chain will contain 1 or more of this transaction objects.
+
+The balance for a wallet is the output of their most recent transaction(the remaining amount) + the output of all the transactions that send money tho this wallet after the wallet's most recent transaction
 
 
 npm run test (to execute tests)

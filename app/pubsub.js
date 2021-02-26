@@ -29,7 +29,11 @@ class PubSub {
                 });
                 break;
             case CHANNELS.TRANSACTION:
-                this.transactionPool.setTransaction(parsedMessage);
+                if (parsedMessage.input.address !== this.wallet.publicKey) {
+                    this.transactionPool.setTransaction(parsedMessage);
+                }else{
+                    console.log('TRANSACTION broadcast received from self, ignoring..');
+                }
                 break;
             default:
                 return;

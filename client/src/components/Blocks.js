@@ -1,12 +1,21 @@
 import React, {Component} from 'react';
+import {Button} from 'react-bootstrap';
 import Block from "./Block";
 import {Link} from "react-router-dom";
 
 class Blocks extends Component {
-    state = {blocks:[]};
+    state = {blocks:[], paginatedId:1, blocksLength:0};
 
     componentDidMount() {
-        fetch(`${document.location.origin}/api/blocks`).then(response => response.json())
+        fetch(`${document.location.origin}/api/blocks/length`).then(response => response.json())
+            .then(json =>{
+                this.setState({blocksLength:json});
+            });
+        this.fetchPaginatedBlocks(this.state.paginatedId)();
+    }
+
+    fetchPaginatedBlocks = paginatedId => () => {
+        fetch(`${document.location.origin}/api/blocks/${paginatedId}`).then(response => response.json())
             .then(json =>{
                 this.setState({blocks:json});
             });
@@ -19,6 +28,16 @@ class Blocks extends Component {
                 <h3>
                     Blocks
                 </h3>
+                <div>
+                    {
+                        [...Array(Math.ceil(this.state.blocksLength/5)).keys()].map(key =>{
+                          const paginatedId = key + 1;
+                          return (
+                            <span onClick={this.fetchPaginatedBlocks(paginatedId)} key={key}><Button bsSize="small" bsStyle="danger">{paginatedId}</Button>{' '}</span>
+                          );
+                        })
+                    }
+                </div>
                 {
                     this.state.blocks.map(block => {
                         return (

@@ -40,4 +40,10 @@ The balance for a wallet is the output of their most recent transaction(the rema
 
 
 npm run test (to execute tests)
+npm run dev-windows/dev-unix for local dev deployment (make sure docker is up and the script points to the redis container id in package.json)
+start (prod deployment) script works only on unix
+
+to publish to heroku run "git push heroku" after commit & push of the changes to github.
+in order to run a peer you have to clone the project from github and everytime you want to publish the changes made in the initially cloned
+ project, make sure you do a "git pull" and a "git push heroku"
 

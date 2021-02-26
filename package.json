@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll",
-    "start": "npm-run-all --parallel start-client start-backend",
+    "start": "npm run build-client-unix & node index.js",
     "dev": "npm-run-all --parallel dev-client dev-backend",
     "dev-peer": "cross-env GENERATE_PEER_PORT='true' ENV='development' nodemon index.js",
     "start-redis": "docker start 905d5d47f93a",
@@ -14,9 +14,7 @@
     "dev-client": "npm run clean-windows && parcel client/src/index.html --out-dir client/dist",
     "clean-windows": "del .cache /s /q && del client\\dist /s /q",
     "clean-unix": "rm -rf .cache client/dist",
-    "dev-backend": "npm run start-redis && cross-env ENV='development' nodemon index.js",
-    "start-backend": "node index.js",
-    "start-client": "npm run build-client-unix"
+    "dev-backend": "npm run start-redis && cross-env ENV='development' nodemon index.js"
   },
   "jest": {
     "testEnvironment": "node"

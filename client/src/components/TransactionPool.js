@@ -51,7 +51,7 @@ class TransactionPool extends Component {
                     })
                 }
                 <hr/>
-                <Button bsStyle="danger" onClick={this.fetchMineTransactions}>Mine the transactions</Button>
+                <Button disabled={Object.values(this.state.transactionPoolMap).length === 0} bsStyle="danger" onClick={this.fetchMineTransactions}>Mine the transactions</Button>
             </div>
         );
     }
